@@ -37,5 +37,18 @@ def mergeSort(input):
 input = [12,4,23,1,98,11,21,45,16,7]
 print(mergeSort(input))
 
-#Time Complexity = O(n(logn))
-#Space Complexity = O(n)
+
+"""
+Time Complexity = O(n(logn))
+Space Complexity = O(n)
+
+mergesort calls itself on the order of log(n) times.The extra space comes from the merge operation.
+Most implementations of merge use an additional array with length equal to the length of the merged result, 
+since in-place merges are very complicated. 
+In other words, to merge two sorted arrays of length n/2, most merges will use an auxiliary array of length n.
+The final step of mergesort does exactly this merge, hence the O(n) space requirement.
+
+The key difference between the quick and merge sort lies in the space requirement of the operation performed at each recursive step.
+The partition step used in quicksort is an IN-PLACE operation,
+while merging usually requires an auxiliary/extra/helper/additional array.
+"""
